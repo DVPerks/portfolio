@@ -1,0 +1,15 @@
+.contact-content {
+  max-width: 800px;
+  font-size: 1.25rem;
+
+  a {
+    color: inherit;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+// Personal project cards; Bootstrap continues to own the grid/gutters.
+.portfolio-section {
+  h2,
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+  }
+
+  .card-img-top {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background-color: #f2f2f2;
+  }
+}

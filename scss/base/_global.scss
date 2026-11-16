@@ -1,0 +1,16 @@
+html {
+  scroll-padding-top: 60px;
+}
+
+// Keep the offset for everyone, but respect reduced-motion preferences.
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+// Existing professional card text appearance. Can be revisited separately.
+.professional-section .card-text,
+.professional-section .card-body {
+  color: #000;
+}

@@ -1,0 +1,38 @@
+// Shared badge style for the Skills section and personal project cards.
+.skill-tag {
+  background-color: var(--color-badge);
+  color: var(--skill-badge-text);
+  border: 1px solid var(--skill-badge-border);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  &:nth-child(even) {
+    background-color: var(--color-badge-alt);
+  }
+}
+
+// Existing green personal-project badges are intentionally retained.
+.portfolio-section .skill-tag {
+  &:nth-child(even) {
+    background-color: var(--personal-badge-even);
+    color: #000;
+  }
+
+  &:nth-child(odd) {
+    background-color: var(--personal-badge-odd);
+    color: #fff;
+  }
+}
+
+// The KnowBe4 badges have their own, slightly smaller rhythm.
+.professional-section .pro-skills li {
+  color: var(--pro-ink);
+  background: var(--pro-badge);
+  border: 1px solid #b6cadb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.3;
+}

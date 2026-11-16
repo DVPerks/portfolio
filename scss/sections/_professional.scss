@@ -1,0 +1,58 @@
+// Professional Work section layout and editorial content.
+// Media controls live separately in components/_gallery.scss.
+.professional-section {
+  --pro-ink: var(--color-ink);
+  --pro-muted: var(--color-muted);
+  --pro-border: var(--color-border);
+  --pro-card: var(--color-surface);
+  --pro-accent: var(--color-accent);
+  --pro-badge: var(--color-badge);
+
+  color: var(--pro-ink);
+  background-color: var(--color-section-bg);
+  border-radius: 12px;
+
+  h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    font-weight: 700;
+  }
+
+  .professional-intro {
+    max-width: 740px;
+    color: var(--pro-muted);
+  }
+
+  .professional-subintro {
+    color: var(--pro-muted);
+  }
+
+  .pro-role {
+    margin-bottom: 8px;
+    color: var(--pro-muted);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.045em;
+    text-transform: uppercase;
+  }
+
+  .pro-card h4,
+  .pro-card h5 {
+    color: var(--pro-ink);
+    font-weight: 700;
+  }
+
+  .pro-challenge {
+    background: #edf3f8;
+    border-left: 3px solid #8ba5ba;
+    padding: 12px 14px;
+    border-radius: 0 8px 8px 0;
+
+    h5 { margin-bottom: 6px; }
+    p { line-height: 1.5; }
+  }
+
+  .pro-attribution {
+    color: var(--pro-muted);
+    font-size: 0.85rem;
+  }
+}

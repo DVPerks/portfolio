@@ -1,0 +1,34 @@
+// Edit these tokens to retheme the entire portfolio.
+// Sass variables create CSS custom properties shared by both pages.
+$ink: #263f55;
+$muted: #516a7f;
+$border: #c9d6e2;
+$surface: #f8fafc;
+$section-bg: #e8eef5;
+$accent: #486780;
+$badge-bg: #dce7f1;
+$badge-alt: #cbd9e6;
+
+:root {
+  --color-ink: #{$ink};
+  --color-muted: #{$muted};
+  --color-border: #{$border};
+  --color-surface: #{$surface};
+  --color-section-bg: #{$section-bg};
+  --color-accent: #{$accent};
+  --color-badge: #{$badge-bg};
+  --color-badge-alt: #{$badge-alt};
+
+  --skill-card-bg: var(--color-surface);
+  --skill-card-border: var(--color-border);
+  --skill-heading: #2c455d;
+  --skill-badge-border: #b6cadb;
+  --skill-badge-text: var(--color-ink);
+  --skill-card-accent: #829bb2;
+
+  // Legacy Personal Projects badges: preserved so this remains a style refactor.
+  --personal-badge-odd: #135207;
+  --personal-badge-even: #7ead05;
+  // The purple image border is retained; change this token when ready.
+  --education-image-border: #7029b5;
+}

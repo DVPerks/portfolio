@@ -1,0 +1,104 @@
+// Dedicated viewer page; separate from Bootstrap and the original demos.
+:root {
+  color-scheme: light;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--color-section-bg);
+  color: var(--color-ink);
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; margin: 0; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.viewer-bar {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  padding: 12px clamp(16px, 3vw, 32px);
+  background: var(--color-surface);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgb(38 63 85 / 8%);
+  position: relative;
+  z-index: 1;
+
+  h1 {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+    margin: 0;
+    line-height: 1.3;
+  }
+}
+
+.viewer-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.viewer-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 9px 14px;
+  border: 1px solid #476581;
+  border-radius: 8px;
+  color: #304d67;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: transparent;
+
+  &:hover { background: var(--color-badge); }
+  &:focus-visible { outline: 3px solid #296bc2; outline-offset: 2px; }
+
+  &.primary {
+    background: #344f68;
+    color: #fff;
+
+    &:hover { background: #243c52; }
+  }
+}
+
+.viewer-content {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+#project-frame {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  border: 0;
+  background: #fff;
+}
+
+#viewer-error {
+  display: none;
+  margin: auto;
+  padding: 24px;
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .viewer-bar {
+    padding: 12px 16px;
+    h1 { width: 100%; }
+  }
+  .viewer-actions { width: 100%; }
+  .viewer-link { flex: 1; }
+}

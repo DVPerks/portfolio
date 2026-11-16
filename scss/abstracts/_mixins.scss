@@ -1,0 +1,7 @@
+// Shared structure for the two kinds of project/skill cards.
+@mixin card-surface($background, $border, $shadow) {
+  background: $background;
+  border: 1px solid $border;
+  border-radius: 12px;
+  box-shadow: $shadow;
+}

@@ -1,0 +1,48 @@
+@use "../abstracts/mixins" as mixins;
+
+.skills-section .skill-card {
+  @include mixins.card-surface(
+    var(--skill-card-bg),
+    var(--skill-card-border),
+    0 3px 10px rgba(42, 65, 86, 0.08)
+  );
+  border-top: 3px solid var(--skill-card-accent);
+}
+
+.professional-section {
+  .pro-card {
+    @include mixins.card-surface(
+      var(--pro-card),
+      var(--pro-border),
+      0 4px 14px rgb(38 63 85 / 8%)
+    );
+    overflow: hidden;
+
+    .card-body {
+      padding: clamp(18px, 2.5vw, 26px);
+    }
+  }
+
+  .pro-featured {
+    border-top: 4px solid var(--pro-accent);
+  }
+
+  .pro-card-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
+    background: #edf2f6;
+    border-bottom: 1px solid var(--pro-border);
+  }
+
+  @media (min-width: 768px) {
+    .pro-featured-img {
+      height: 100%;
+      min-height: 330px;
+      aspect-ratio: auto;
+      border-right: 1px solid var(--pro-border);
+      border-bottom: 0;
+    }
+  }
+}
