@@ -30,13 +30,50 @@ html {
   font-weight: 700;
 }
 
-.skill-tag:nth-child(even) {
-  background-color: #d68c14;
+.portfolio-section .skill-tag:nth-child(even) {
+  background-color: #7ead05;
+  color: #000;
 }
 
-.skill-tag:nth-child(odd) {
+.portfolio-section .skill-tag:nth-child(odd) {
   background-color: #135207;
+  color: #fff;
 }
+
+
+/* Skills section */
+/* Skills cards */
+.skills-section .skill-card {
+  background-color: #d0e3fc;
+  border: 1px solid #c9d7b4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Card headings */
+.skills-section .skill-card h3 {
+  color: #203322;
+  font-weight: 700;
+}
+
+/* Skill badges */
+.skills-section .skill-tag {
+  font-size: 0.875rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+/* Alternating badge colors */
+.skills-section .skill-tag:nth-child(odd) {
+  background-color: #245a37;
+  color: #ffffff;
+}
+
+.skills-section .skill-tag:nth-child(even) {
+  background-color: #e9ab42;
+  color: #191919;
+}
+
 
 /* CONTACT SECTION */
 .contact-content {
