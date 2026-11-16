@@ -10,12 +10,13 @@
     <title>Drake Perkins's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/professional-work.css" rel="stylesheet">
   </head>
   <body class="bg-subtle-primary" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-top-margin="60px">
     <!--Top navigation-->
     <nav class="navbar sticky-top md:navbar-expand bg-1 fg-2 bg-subtle-secondary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Drake Perkins</a>
+        <a class="navbar-brand" href="#home">Drake Perkins</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon" aria-hidden="true"></span>
         </button>
@@ -26,10 +27,11 @@
           </div>
           <div class="drawer-body">
             <div id="navbar-scrollspy" class="nav nav-pills navbar-nav">
-              <a class="nav-link" href="#home" >HOME</a>
-              <a class="nav-link" href="#portfolio">PORTFOLIO</a>
-              <a class="nav-link" href="#education">EDUCTATION</a>
+              <a class="nav-link" href="#home">HOME</a>
+              <a class="nav-link" href="#professional-work">PROFESSIONAL WORK</a>
+              <a class="nav-link" href="#portfolio">PERSONAL PROJECTS</a>
               <a class="nav-link" href="#skills">SKILLS</a>
+              <a class="nav-link" href="#education">EDUCTATION</a>
               <a class="nav-link" href="#contact">CONTACT</a>
             </div>
           </div>
@@ -57,7 +59,7 @@
             experiences that are intuitive and accessible.
           </p>
 
-          <a href="#portfolio" class="btn-solid theme-primary mt-3">
+          <a href="#professional-work" class="btn-solid theme-primary mt-3">
             View My Work
           </a>
         </div>
@@ -70,14 +72,293 @@
             alt="Photo of Drake Perkins"
           >
         </div>
-
-        
-
       </div>
     </header>
 
-
     <main class="container">
+      <section aria-labelledby="professional-heading" class="professional-section p-4 py-5" id="professional-work">
+        <div class="text-center mb-4">
+          <h2 id="professional-heading">
+            Professional Work
+          </h2>
+          <p class="professional-intro mx-auto">
+            Selected interactive applications and learning experiences I worked on at KnowBe4. My
+            contributions range from end-to-end development to supporting and localizing existing games.
+          </p>
+        </div>
+        <h3 class="h5 mb-3">
+          End-to-End Development
+        </h3>
+        <div class="row g-4 mb-5">
+          <!-- Workplace Hazard Patrol -->
+          <div class="col-12">
+            <article class="card pro-card pro-featured h-100">
+              <div class="row g-0">
+                <div class="col-12 md:col-5">
+                  <div class="pro-media-gallery" data-gallery="workplace-hazard-patrol" data-title="Workplace Hazard Patrol">
+                    <img alt="Workplace Hazard Patrol game settings with music, effects, and animations options" class="pro-card-img" loading="lazy" src="images/knowbe4/workplace-hazard-patrol/WorkplaceHazardPatrol_GameSettings_DrakePerkins.png"/>
+                  </div>
+                </div>
+                <div class="col-12 md:col-7">
+                  <div class="card-body d-flex flex-column">
+                    <p class="pro-role">
+                      End-to-end development
+                    </p>
+                    <h4 class="h5 card-title">
+                      Workplace Hazard Patrol
+                    </h4>
+                    <p class="card-text">
+                      An interactive workplace safety game developed end-to-end, combining 3D environments, 2D
+                      interfaces, hazard-based scenarios, quiz logic, configurable game settings, and SCORM
+                      integration.
+                    </p>
+                    <div class="pro-challenge">
+                      <h5 class="h6">
+                        Technical challenge
+                      </h5>
+                      <p class="mb-0">
+                        Bringing 3D environments, 2D interaction overlays, and assessment logic together in
+                        one experience while supporting learning management system integration.
+                      </p>
+                    </div>
+                    <h5 class="h6 mt-3">
+                      Featured skills
+                    </h5>
+                    <ul class="pro-skills list-unstyled d-flex flex-wrap gap-2 mb-0">
+                      <li>
+                        Construct 3
+                      </li>
+                      <li>
+                        3D / 2D Integration
+                      </li>
+                      <li>
+                        Interactive Game Design
+                      </li>
+                      <li>
+                        Quiz Logic
+                      </li>
+                      <li>
+                        SCORM
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="row g-4">
+          <!-- Incident Reporting: featured full-width case study -->
+          <div class="col-12 md:col-6">
+            <article class="card pro-card h-100">
+              <div class="pro-media-gallery" data-gallery="incident-reporting" data-title="Incident Reporting">
+                <img alt="Incident Reporting training interface with video and interactive elements" class="pro-card-img" loading="lazy" src="images/knowbe4/incident-reporting/IR-1.png"/>
+              </div>
+              <div class="card-body h-100 d-flex flex-column">
+                <p class="pro-role">
+                  End-to-end development
+                </p>
+                <h4 class="h5 card-title">
+                  Incident Reporting
+                </h4>
+                <p class="card-text">
+                  An interactive security awareness training experience built in Construct 3. I
+                  developed the quiz functionality and a custom video interface with an SRT subtitle
+                  parser, time-synchronized accessible captions, scrubbing, and playback and volume
+                  controls.
+                </p>
+                <div class="pro-challenge">
+                  <h5 class="h6">
+                    Technical challenge
+                  </h5>
+                  <p class="mb-0">
+                    Construct 3 provided basic video playback hooks, but not the captioning and
+                    navigation experience the project needed. I built the SRT parser and kept captions
+                    synchronized with playback time, including when users sought to another point in
+                    the video.
+                  </p>
+                </div>
+                <h5 class="h6 mt-3">
+                  Featured skills
+                </h5>
+                <ul class="pro-skills list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li>
+                    Construct 3
+                  </li>
+                  <li>
+                    SRT Parsing
+                  </li>
+                  <li>
+                    Accessible Captions
+                  </li>
+                  <li>
+                    Video Synchronization
+                  </li>
+                  <li>
+                    Custom Media Controls
+                  </li>
+                  <li>
+                    Quiz Logic
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <!-- Knowledge Race -->
+          <div class="col-12 md:col-6">
+            <article class="card pro-card h-100">
+              <div class="pro-media-gallery" data-gallery="knowledge-race" data-title="Knowledge Race">
+                <img alt="Knowledge Race game-mode selection screen with options to host, join, or play solo" class="pro-card-img" loading="lazy" src="images/knowbe4/knowledge-race/KnowledgeRace_ChooseAMode_DrakePerkins.png"/>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="pro-role">
+                  End-to-end development
+                </p>
+                <h4 class="h5 card-title">
+                  Knowledge Race
+                </h4>
+                <p class="card-text">
+                  A multiplayer security awareness quiz game developed end-to-end, featuring peer-to-peer
+                  player communication, real-time game-state synchronization, and competitive
+                  leaderboards.
+                </p>
+                <div class="pro-challenge">
+                  <h5 class="h6">
+                    Technical challenge
+                  </h5>
+                  <p class="mb-0">
+                    Coordinating player communication and keeping the multiplayer game state synchronized
+                    as participants progressed through the quiz.
+                  </p>
+                </div>
+                <h5 class="h6 mt-3">
+                  Featured skills
+                </h5>
+                <ul class="pro-skills list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li>
+                    Multiplayer Development
+                  </li>
+                  <li>
+                    Peer-to-Peer Communication
+                  </li>
+                  <li>
+                    Real-Time Synchronization
+                  </li>
+                  <li>
+                    Game Logic
+                  </li>
+                  <li>
+                    Interactive UI
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <h3 class="h5 mb-2">
+            Maintenance &amp; Localization
+          </h3>
+          <p class="professional-subintro mb-3">
+            For the following production games, I contributed maintenance and localized versions; I was not
+            the original or primary developer.
+          </p>
+          <!-- Double Trouble Trivia -->
+          <div class="col-12 md:col-6">
+            <article class="card pro-card h-100">
+              <div class="pro-media-gallery" data-gallery="double-trouble-trivia" data-title="Double Trouble Trivia">
+                <img alt="Double Trouble Trivia game overview screenshot" class="pro-card-img" loading="lazy" src="images/knowbe4/double-trouble-trivia/DTT-1.png"/>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="pro-role">
+                  Maintenance &amp; localization
+                </p>
+                <h4 class="h5 card-title">
+                  Double Trouble Trivia
+                </h4>
+                <p class="card-text">
+                  Supported an existing interactive trivia game through ongoing maintenance and the
+                  creation of localized versions for different audiences.
+                </p>
+                <div class="pro-challenge">
+                  <h5 class="h6">
+                    Development focus
+                  </h5>
+                  <p class="mb-0">
+                    Supporting a live, previously developed game while adapting it for localized releases.
+                  </p>
+                </div>
+                <h5 class="h6 mt-3">
+                  Featured skills
+                </h5>
+                <ul class="pro-skills list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li>
+                    Application Maintenance
+                  </li>
+                  <li>
+                    Localization
+                  </li>
+                  <li>
+                    Production Support
+                  </li>
+                  <li>
+                    Interactive Games
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+          <!-- Who Wants to Be a Human Firewall -->
+          <div class="col-12 md:col-6">
+            <article class="card pro-card h-100">
+              <div class="pro-media-gallery" data-gallery="human-firewall" data-title="Who Wants to Be a Human Firewall">
+                <img alt="Who Wants to Be a Human Firewall game screenshot" class="pro-card-img" loading="lazy" src="images/knowbe4/human-firewall/HF-1.png"/>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <p class="pro-role">
+                  Maintenance &amp; localization
+                </p>
+                <h4 class="h5 card-title">
+                  Who Wants to Be a Human Firewall
+                </h4>
+                <p class="card-text">
+                  Maintained and supported localized versions of an established security awareness quiz
+                  game with interactive questions and game-show-style presentation.
+                </p>
+                <div class="pro-challenge">
+                  <h5 class="h6">
+                    Development focus
+                  </h5>
+                  <p class="mb-0">
+                    Supporting an existing interactive experience through ongoing maintenance and
+                    localization work rather than original game development.
+                  </p>
+                </div>
+                <h5 class="h6 mt-3">
+                  Featured skills
+                </h5>
+                <ul class="pro-skills list-unstyled d-flex flex-wrap gap-2 mb-0">
+                  <li>
+                    Application Maintenance
+                  </li>
+                  <li>
+                    Localization
+                  </li>
+                  <li>
+                    Production Support
+                  </li>
+                  <li>
+                    Interactive Games
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p class="pro-attribution mt-4 mb-0">
+          Professional work completed at KnowBe4. Product names, screenshots, and related assets belong to
+          their respective owners.
+        </p>
+      </section>
+
 
       <!-- PORTFOLIO SECTION -->
       <section id="portfolio" class="portfolio-section p-4">
@@ -116,12 +397,8 @@
                 </ul>
 
                 <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a
-                    href="projects/project-1/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-solid theme-primary"
-                  >
+                  <a href="project-viewer.html?project=1"
+                    class="btn-solid theme-primary">
                     Live Demo
                   </a>
 
@@ -165,12 +442,8 @@
                 </ul>
 
                 <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a
-                    href="projects/project-2/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-solid theme-primary"
-                  >
+                  <a href="project-viewer.html?project=2"
+                    class="btn-solid theme-primary">
                     Live Demo
                   </a>
 
@@ -217,12 +490,8 @@
                 </ul>
 
                 <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a
-                    href="projects/project-3/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-solid theme-primary"
-                  >
+                  <a href="project-viewer.html?project=3"
+                    class="btn-solid theme-primary">
                     Live Demo
                   </a>
 
@@ -270,12 +539,8 @@
                 </ul>
 
                 <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a
-                    href="projects/project-4/index.html"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-solid theme-primary"
-                  >
+                  <a href="project-viewer.html?project=4"
+                    class="btn-solid theme-primary">
                     Live Demo
                   </a>
 
@@ -303,7 +568,7 @@
         <div class="row g-4">
 
           <!-- Core Languages -->
-          <div class="col-12 md:col-6">
+          <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
@@ -325,7 +590,7 @@
           </div>
 
           <!-- Accessibility -->
-          <div class="col-12 md:col-6">
+          <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
@@ -346,7 +611,7 @@
           </div>
 
           <!-- Frameworks -->
-          <div class="col-12 md:col-6">
+          <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
@@ -365,7 +630,7 @@
           </div>
 
           <!-- Front-End Development -->
-          <div class="col-12 md:col-6">
+          <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
@@ -388,7 +653,7 @@
           </div>
 
           <!-- Development Tools -->
-          <div class="col-12 md:col-6">
+          <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
@@ -410,7 +675,7 @@
           </div>
 
           <!-- Platforms & Integrations -->
-          <div class="col-12 md:col-6">
+          <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
@@ -489,5 +754,6 @@
 
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <script src="js/professional-gallery.js" defer></script>
   </body>
 </html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Preview | Drake Perkins</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #e8eef5;
+      color: #263f55;
+    }
+
+    * { box-sizing: border-box; }
+    [hidden] { display: none !important; }
+    html, body { height: 100%; margin: 0; }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+    }
+
+    .viewer-bar {
+      flex: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px 24px;
+      padding: 12px clamp(16px, 3vw, 32px);
+      background: #f8fafc;
+      border-bottom: 1px solid #c9d6e2;
+      box-shadow: 0 2px 8px rgb(38 63 85 / 8%);
+      position: relative;
+      z-index: 1;
+    }
+
+    .viewer-bar h1 {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .viewer-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+
+    .viewer-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 40px;
+      padding: 9px 14px;
+      border: 1px solid #476581;
+      border-radius: 8px;
+      color: #304d67;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+      background: transparent;
+    }
+
+    .viewer-link:hover { background: #dce7f1; }
+    .viewer-link:focus-visible { outline: 3px solid #296bc2; outline-offset: 2px; }
+    .viewer-link.primary { background: #344f68; color: #fff; }
+    .viewer-link.primary:hover { background: #243c52; }
+
+    .viewer-content { flex: 1; min-height: 0; display: flex; }
+    #project-frame { flex: 1; min-width: 0; width: 100%; border: 0; background: #fff; }
+    #viewer-error {
+      display: none;
+      margin: auto;
+      padding: 24px;
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 600px) {
+      .viewer-bar { padding: 12px 16px; }
+      .viewer-bar h1 { width: 100%; }
+      .viewer-actions { width: 100%; }
+      .viewer-link { flex: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header class="viewer-bar">
+    <h1 id="project-title">Project Preview</h1>
+    <nav class="viewer-actions" aria-label="Project viewer navigation">
+      <a class="viewer-link" href="./index.html#portfolio">&larr; Back to Portfolio</a>
+      <a class="viewer-link primary" id="open-project" href="./index.html#portfolio" target="_blank" rel="noopener noreferrer" hidden>Open Full Screen ↗</a>
+    </nav>
+  </header>
+
+  <main class="viewer-content">
+    <iframe id="project-frame" title="Project preview" allowfullscreen></iframe>
+    <p id="viewer-error" role="alert">Project not found. Please return to the portfolio and select a project.</p>
+  </main>
+
+  <script>
+    // Each project stays in its original folder, unchanged.
+    const projects = {
+      "1": { title: "To-do List", url: "projects/project-1/index.html" },
+      "2": { title: "Game Show App", url: "projects/project-2/index.html" },
+      "3": { title: "WebApp Dashboard", url: "projects/project-3/index.html" },
+      "4": { title: "Interactive Photo Gallery", url: "projects/project-4/index.html" }
+    };
+
+    const id = new URLSearchParams(window.location.search).get("project");
+    const project = Object.hasOwn(projects, id) ? projects[id] : null;
+    const frame = document.getElementById("project-frame");
+    const openProject = document.getElementById("open-project");
+
+    if (project) {
+      document.title = `${project.title} | Drake Perkins`;
+      document.getElementById("project-title").textContent = project.title;
+      frame.title = `${project.title} interactive demo`;
+      frame.src = project.url;
+      openProject.href = project.url;
+      openProject.hidden = false;
+    } else {
+      frame.remove();
+      document.getElementById("viewer-error").style.display = "block";
+    }
+  </script>
+</body>
+</html>

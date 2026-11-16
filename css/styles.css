@@ -1,6 +1,21 @@
+:root {
+  --skill-card-bg: #f8fafc;
+  --skill-card-border: #c9d6e2;
+  --skill-heading: #2c455d;
+
+  --skill-badge-bg: #dce7f1;
+  --skill-badge-alt: #cbd9e6;
+  --skill-badge-border: #b6cadb;
+  --skill-badge-text: #263f55;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 60px;
+}
+
+.professional-section .card-text, .professional-section .card-body {
+    color: #000;
 }
 
 /* Education image */
@@ -41,37 +56,34 @@ html {
 }
 
 
-/* Skills section */
 /* Skills cards */
 .skills-section .skill-card {
-  background-color: #d0e3fc;
-  border: 1px solid #c9d7b4;
+  background-color: var(--skill-card-bg);
+  border: 1px solid var(--skill-card-border);
+  border-top: 3px solid #829bb2;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 3px 10px rgba(42, 65, 86, 0.08);
 }
 
-/* Card headings */
+/* Skills category headings */
 .skills-section .skill-card h3 {
-  color: #203322;
+  color: var(--skill-heading);
   font-weight: 700;
 }
 
-/* Skill badges */
-.skills-section .skill-tag {
+/* Skill badges throughout the portfolio */
+.skill-tag {
+  background-color: var(--skill-badge-bg);
+  color: var(--skill-badge-text);
+  border: 1px solid var(--skill-badge-border);
   font-size: 0.875rem;
-  line-height: 1.3;
   font-weight: 600;
+  line-height: 1.3;
 }
 
-/* Alternating badge colors */
-.skills-section .skill-tag:nth-child(odd) {
-  background-color: #245a37;
-  color: #ffffff;
-}
-
-.skills-section .skill-tag:nth-child(even) {
-  background-color: #e9ab42;
-  color: #191919;
+/* Subtle alternating tones */
+.skill-tag:nth-child(even) {
+  background-color: var(--skill-badge-alt);
 }
 
 
