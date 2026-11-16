@@ -9,11 +9,12 @@
 
     <title>Drake Perkins's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <link href="css/main.css" rel="stylesheet">
   </head>
-  <body class="bg-subtle-primary" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-top-margin="60px">
+  <body class="bg-subtle-primary" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-top-margin="90px">
     <!--Top navigation-->
-    <nav class="navbar sticky-top md:navbar-expand bg-1 fg-2 bg-subtle-secondary">
+    <nav class="navbar sticky-top lg:navbar-expand bg-1 fg-2 bg-subtle-secondary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#home">Drake Perkins</a>
         <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,8 +28,8 @@
           <div class="drawer-body">
             <div id="navbar-scrollspy" class="nav nav-pills navbar-nav">
               <a class="nav-link" href="#home">HOME</a>
-              <a class="nav-link" href="#professional-work">PROFESSIONAL WORK</a>
               <a class="nav-link" href="#portfolio">PERSONAL PROJECTS</a>
+              <a class="nav-link" href="#professional-work">PROFESSIONAL WORK</a>
               <a class="nav-link" href="#skills">SKILLS</a>
               <a class="nav-link" href="#education">EDUCTATION</a>
               <a class="nav-link" href="#contact">CONTACT</a>
@@ -58,9 +59,26 @@
             experiences that are intuitive and accessible.
           </p>
 
-          <a href="#professional-work" class="btn-solid theme-primary mt-3">
-            View My Work
-          </a>
+          <div class="d-flex flex-wrap gap-3 mt-3">
+            <a
+              href="#portfolio"
+              class="btn-solid theme-primary"
+            >
+              View My Work
+            </a>
+
+            <a
+              href="resume/Drake-Perkins-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-outline theme-primary"
+            >
+              <i class="bi bi-file-earmark-person"
+                aria-hidden="true"></i>
+              View Resume
+            </a>
+          </div>
+
         </div>
 
         <!-- Profile Image -->
@@ -75,6 +93,213 @@
     </header>
 
     <main class="container">
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio" class="portfolio-section p-4 py-5">
+
+        <h2 class="text-center mb-3">Personal Projects</h2>
+
+        <p class="portfolio-intro mx-auto text-center mb-4">
+          Independent projects exploring JavaScript, React,
+          responsive interfaces, and interactive web development.
+        </p>
+
+        <div class="row g-4">
+
+          <!-- Project 1 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-1.png"
+                class="card-img-top"
+                alt="Screenshot of the To-do List app"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">To-do List</h3>
+
+                <p class="card-text">
+                  An interactive task management application built with React and Vite, allowing users to create, edit, complete, and filter tasks. Features reusable components, React Hooks for state management, local storage for task persistence, and accessible keyboard interactions.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">React.js</li>
+                  <li class="skill-tag rounded-4 p-2">Vite</li>
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">React Hooks</li>
+                  <li class="skill-tag rounded-4 p-2">State Management</li>
+                  <li class="skill-tag rounded-4 p-2">Component-Based UI</li>
+                  <li class="skill-tag rounded-4 p-2">Local Storage</li>
+                  <li class="skill-tag rounded-4 p-2">Accessibility</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a href="project-viewer.html?project=1"
+                    class="btn-solid theme-primary">
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/todo-react"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-2.png"
+                class="card-img-top"
+                alt="Screenshot of the Game Show app"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Game Show App</h3>
+
+                <p class="card-text">
+                  An interactive JavaScript word-guessing game where players uncover randomly selected phrases using an on-screen keyboard. Features dynamic letter reveals, limited incorrect guesses, win/loss detection, and the ability to start a new game.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">HTML</li>
+                  <li class="skill-tag rounded-4 p-2">CSS</li>
+                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
+                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a href="project-viewer.html?project=2"
+                    class="btn-solid theme-primary">
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/techdegree-project-6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-3.png"
+                class="card-img-top"
+                alt="Screenshot of the WebApp Dashboard"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">WebApp Dashboard</h3>
+
+                <p class="card-text">
+                  An interactive web dashboard built with JavaScript and Chart.js, featuring dynamic traffic visualizations and social media statistics. Includes a messaging interface with form validation and customizable settings saved using local storage.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">Chart.js</li>
+                  <li class="skill-tag rounded-4 p-2">Data Visualization</li>
+                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
+                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
+                  <li class="skill-tag rounded-4 p-2">Local Storage</li>
+                  <li class="skill-tag rounded-4 p-2">Form Validation</li>
+                  <li class="skill-tag rounded-4 p-2">HTML & CSS</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a href="project-viewer.html?project=3"
+                    class="btn-solid theme-primary">
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/techdegree-project-7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-4.png"
+                class="card-img-top"
+                alt="Screenshot of the Interactive Photo Gallary app"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Interactive Photo Gallery</h3>
+
+                <p class="card-text">
+                  A responsive photo gallery built with JavaScript and CSS Grid, featuring dynamically loaded images and real-time search filtering. Includes an interactive lightbox for viewing full-size photos with navigation controls and captions.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">HTML & CSS</li>
+                  <li class="skill-tag rounded-4 p-2">SCSS (Sass)</li>
+                  <li class="skill-tag rounded-4 p-2">CSS Grid</li>
+                  <li class="skill-tag rounded-4 p-2">Async/Await</li>
+                  <li class="skill-tag rounded-4 p-2">Fetch API</li>
+                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
+                  <li class="skill-tag rounded-4 p-2">Search Filtering</li>
+                  <li class="skill-tag rounded-4 p-2">baguetteBox.js</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a href="project-viewer.html?project=4"
+                    class="btn-solid theme-primary">
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/techdegree-project-5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Professional Work Section -->
       <section aria-labelledby="professional-heading" class="professional-section p-4 py-5" id="professional-work">
         <div class="text-center mb-4">
           <h2 id="professional-heading">
@@ -357,207 +582,6 @@
           their respective owners.
         </p>
       </section>
-
-
-      <!-- PORTFOLIO SECTION -->
-      <section id="portfolio" class="portfolio-section p-4">
-
-        <h2 class="text-center mb-4">Portfolio</h2>
-
-        <div class="row g-3 gx-5 text-center">
-
-          <!-- Project 1 -->
-          <div class="col-12 md:col-6">
-            <div class="card h-100">
-              <img
-                src="images/portfolio-1.png"
-                class="card-img-top"
-                alt="Screenshot of the To-do List app"
-              >
-
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">To-do List</h3>
-
-                <p class="card-text">
-                  An interactive task management application built with React and Vite, allowing users to create, edit, complete, and filter tasks. Features reusable components, React Hooks for state management, local storage for task persistence, and accessible keyboard interactions.
-                </p>
-
-                <h4 class="h6 mt-auto">Featured Skills:</h4>
-                
-                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
-                  <li class="skill-tag rounded-4 p-2">React.js</li>
-                  <li class="skill-tag rounded-4 p-2">Vite</li>
-                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
-                  <li class="skill-tag rounded-4 p-2">React Hooks</li>
-                  <li class="skill-tag rounded-4 p-2">State Management</li>
-                  <li class="skill-tag rounded-4 p-2">Component-Based UI</li>
-                  <li class="skill-tag rounded-4 p-2">Local Storage</li>
-                  <li class="skill-tag rounded-4 p-2">Accessibility</li>
-                </ul>
-
-                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a href="project-viewer.html?project=1"
-                    class="btn-solid theme-primary">
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/DVPerks/todo-react"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-outline theme-primary"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="col-12 md:col-6">
-            <div class="card h-100">
-              <img
-                src="images/portfolio-2.png"
-                class="card-img-top"
-                alt="Screenshot of the Game Show app"
-              >
-
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">Game Show App</h3>
-
-                <p class="card-text">
-                  An interactive JavaScript word-guessing game where players uncover randomly selected phrases using an on-screen keyboard. Features dynamic letter reveals, limited incorrect guesses, win/loss detection, and the ability to start a new game.
-                </p>
-
-                <h4 class="h6 mt-auto">Featured Skills:</h4>
-                
-                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
-                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
-                  <li class="skill-tag rounded-4 p-2">HTML</li>
-                  <li class="skill-tag rounded-4 p-2">CSS</li>
-                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
-                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
-                </ul>
-
-                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a href="project-viewer.html?project=2"
-                    class="btn-solid theme-primary">
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/DVPerks/techdegree-project-6"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-outline theme-primary"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 3 -->
-          <div class="col-12 md:col-6">
-            <div class="card h-100">
-              <img
-                src="images/portfolio-3.png"
-                class="card-img-top"
-                alt="Screenshot of the WebApp Dashboard"
-              >
-
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">WebApp Dashboard</h3>
-
-                <p class="card-text">
-                  An interactive web dashboard built with JavaScript and Chart.js, featuring dynamic traffic visualizations and social media statistics. Includes a messaging interface with form validation and customizable settings saved using local storage.
-                </p>
-
-                <h4 class="h6 mt-auto">Featured Skills:</h4>
-                
-                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
-                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
-                  <li class="skill-tag rounded-4 p-2">Chart.js</li>
-                  <li class="skill-tag rounded-4 p-2">Data Visualization</li>
-                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
-                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
-                  <li class="skill-tag rounded-4 p-2">Local Storage</li>
-                  <li class="skill-tag rounded-4 p-2">Form Validation</li>
-                  <li class="skill-tag rounded-4 p-2">HTML & CSS</li>
-                </ul>
-
-                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a href="project-viewer.html?project=3"
-                    class="btn-solid theme-primary">
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/DVPerks/techdegree-project-7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-outline theme-primary"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 4 -->
-          <div class="col-12 md:col-6">
-            <div class="card h-100">
-              <img
-                src="images/portfolio-4.png"
-                class="card-img-top"
-                alt="Screenshot of the Interactive Photo Gallary app"
-              >
-
-              <div class="card-body d-flex flex-column">
-                <h3 class="card-title h5">Interactive Photo Gallery</h3>
-
-                <p class="card-text">
-                  A responsive photo gallery built with JavaScript and CSS Grid, featuring dynamically loaded images and real-time search filtering. Includes an interactive lightbox for viewing full-size photos with navigation controls and captions.
-                </p>
-
-                <h4 class="h6 mt-auto">Featured Skills:</h4>
-                
-                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
-                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
-                  <li class="skill-tag rounded-4 p-2">HTML & CSS</li>
-                  <li class="skill-tag rounded-4 p-2">SCSS (Sass)</li>
-                  <li class="skill-tag rounded-4 p-2">CSS Grid</li>
-                  <li class="skill-tag rounded-4 p-2">Async/Await</li>
-                  <li class="skill-tag rounded-4 p-2">Fetch API</li>
-                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
-                  <li class="skill-tag rounded-4 p-2">Search Filtering</li>
-                  <li class="skill-tag rounded-4 p-2">baguetteBox.js</li>
-                </ul>
-
-                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
-                  <a href="project-viewer.html?project=4"
-                    class="btn-solid theme-primary">
-                    Live Demo
-                  </a>
-
-                  <a
-                    href="https://github.com/DVPerks/techdegree-project-5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="btn-outline theme-primary"
-                  >
-                    View Code
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </section>
       
       <!-- SKILLS SECTION -->
       <section id="skills" class="skills-section p-4 py-5">
@@ -604,6 +628,7 @@
                   <li class="skill-tag rounded-4 p-2">Semantic HTML</li>
                   <li class="skill-tag rounded-4 p-2">Keyboard Accessibility</li>
                   <li class="skill-tag rounded-4 p-2">Focus Management</li>
+                  <li class="skill-tag rounded-4 p-2">Accessible Media & Captioning</li>
                 </ul>
               </div>
             </div>
@@ -633,16 +658,16 @@
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
-                  Front-End Development
+                  UI Engineering & Development
                 </h3>
 
                 <ul class="d-flex flex-wrap justify-content-center gap-2 list-unstyled m-0">
                   <li class="skill-tag rounded-4 p-2">Responsive Design</li>
                   <li class="skill-tag rounded-4 p-2">CSS Grid & Flexbox</li>
                   <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
-                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
+                  <li class="skill-tag rounded-4 p-2">Data Visualization</li>
                   <li class="skill-tag rounded-4 p-2">React Hooks</li>
-                  <li class="skill-tag rounded-4 p-2">State Management</li>
+                  <li class="skill-tag rounded-4 p-2">React State Management</li>
                   <li class="skill-tag rounded-4 p-2">Async/Await</li>
                   <li class="skill-tag rounded-4 p-2">Fetch API</li>
                   <li class="skill-tag rounded-4 p-2">Local Storage</li>
@@ -673,21 +698,26 @@
             </div>
           </div>
 
-          <!-- Platforms & Integrations -->
+          <!-- Interactive Systems & Integrations -->
           <div class="col-12 md:col-6 lg:col-4">
             <div class="card skill-card h-100">
               <div class="card-body">
                 <h3 class="h5 text-center mb-4">
-                  Platforms & Integrations
+                  Interactive Systems & Integrations
                 </h3>
 
                 <ul class="d-flex flex-wrap justify-content-center gap-2 list-unstyled m-0">
-                  <li class="skill-tag rounded-4 p-2">REST APIs</li>
-                  <li class="skill-tag rounded-4 p-2">JSON</li>
-                  <li class="skill-tag rounded-4 p-2">AWS Integrations</li>
                   <li class="skill-tag rounded-4 p-2">Construct 3</li>
+                  <li class="skill-tag rounded-4 p-2">Peer-to-Peer Communication</li>
+                  <li class="skill-tag rounded-4 p-2">Real-Time State Synchronization</li>
+                  <li class="skill-tag rounded-4 p-2">SRT Parsing</li>
+                  <li class="skill-tag rounded-4 p-2">Custom Media Controls</li>
+                  <li class="skill-tag rounded-4 p-2">Interactive Game Logic</li>
+                  <li class="skill-tag rounded-4 p-2">REST APIs</li>
+                  <li class="skill-tag rounded-4 p-2">AWS Integrations</li>
                   <li class="skill-tag rounded-4 p-2">SCORM 1.2 / 2004</li>
                   <li class="skill-tag rounded-4 p-2">AICC</li>
+                  <li class="skill-tag rounded-4 p-2">Application Localization</li>
                 </ul>
               </div>
             </div>
@@ -698,57 +728,221 @@
 
 
       
+      
       <!-- EDUCATION SECTION -->
-      <section id="education" class="education-section text-center py-4">
+      <section id="education" class="education-section py-5">
 
-        <h2 class="mb-4">EDUCATION</h2>
+        <h2 class="text-center mb-4">EDUCATION</h2>
 
-        <p>Bachelor of Science in Computer Engineering, 2020</p>
+        <div class="education-card">
+          <div class="row align-items-center g-4">
 
-        <p>Florida Polytechnic University, Lakeland Florida</p>
+            <!-- Education Details -->
+            <div class="col-12 md:col-7">
 
-        <img
-          src="images/campus.png"
-          class="img-fluid education-image"
-          alt="Florida Polytechnic University building"
-        >
+              <p class="education-year mb-2">
+                CLASS OF 2020
+              </p>
 
-      </section>
+              <h3 class="h4 mb-3">
+                Bachelor of Science in Computer Engineering
+              </h3>
 
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="contact-section text-center py-4">
+              <p class="education-minor mb-3">
+                Minor in Machine Intelligence
+                (Artificial Intelligence)
+              </p>
 
-        <h2 class="mb-4">CONTACT</h2>
+              <p class="education-school mb-3">
+                Florida Polytechnic University
+                <span class="d-block">
+                  Lakeland, Florida
+                </span>
+              </p>
 
-        <div class="mx-auto contact-content">
+              <p class="education-summary mb-0">
+                My background in computer engineering and
+                machine intelligence provides a foundation
+                for approaching software development,
+                interactive applications, and technical
+                problem-solving.
+              </p>
 
-          <p class="mb-3">
-            If you're interested in chatting or want more information
-            about what I've been working on, I'd love to hear from you!
-          </p>
+            </div>
 
-          <p class="mb-3">
-            Phone:
-            <a href="tel:+8166941588">
-              +1 (816) 694-1588
-            </a>
-          </p>
+            <!-- University Image -->
+            <div class="col-12 md:col-5">
+              <img
+                src="images/campus.png"
+                class="img-fluid education-image"
+                alt="Florida Polytechnic University campus building"
+              >
+            </div>
 
-          <p>
-            Email:
-            <a href="mailto:drakevperks@gmail.com">
-              drakevperks@gmail.com
-            </a>
-          </p>
-
+          </div>
         </div>
 
       </section>
 
+
+      
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="contact-section py-5">
+
+        <h2 class="text-center mb-4">GET IN TOUCH</h2>
+
+        <div class="contact-content mx-auto">
+
+          <div class="contact-card">
+
+            <h3 class="h4 text-center mb-3">Let's Connect</h3>
+
+            <p class="contact-intro text-center mb-4">
+              Interested in working together or discussing a
+              front-end development opportunity?
+              I'd be glad to connect.
+            </p>
+
+            <div class="row g-3">
+
+              <!-- Email -->
+              <div class="col-12 md:col-6">
+                <a
+                  href="mailto:drakevperks@gmail.com"
+                  class="contact-link"
+                >
+                  <i class="bi bi-envelope-fill contact-icon"
+                    aria-hidden="true"></i>
+
+                  <span class="contact-info">
+                    <span class="contact-label">Email</span>
+                    <span class="contact-detail">
+                      drakevperks@gmail.com
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="col-12 md:col-6">
+                <a
+                  href="https://www.linkedin.com/in/drake-p-0a9472398/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                >
+                  <i class="bi bi-linkedin contact-icon"
+                    aria-hidden="true"></i>
+
+                  <span class="contact-info">
+                    <span class="contact-label">LinkedIn</span>
+                    <span class="contact-detail">
+                      Connect professionally
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- GitHub -->
+              <div class="col-12 md:col-6">
+                <a
+                  href="https://github.com/DVPerks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-link"
+                >
+                  <i class="bi bi-github contact-icon"
+                    aria-hidden="true"></i>
+
+                  <span class="contact-info">
+                    <span class="contact-label">GitHub</span>
+                    <span class="contact-detail">
+                      Explore my repositories
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+              <!-- Phone -->
+              <div class="col-12 md:col-6">
+                <a
+                  href="tel:+18166941588"
+                  class="contact-link"
+                >
+                  <i class="bi bi-telephone-fill contact-icon"
+                    aria-hidden="true"></i>
+
+                  <span class="contact-info">
+                    <span class="contact-label">Phone</span>
+                    <span class="contact-detail">
+                      +1 (816) 694-1588
+                    </span>
+                  </span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </section>
     </main>
 
-    <!--Footer navigation-->
-    <footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+
+        <div class="d-flex flex-wrap align-items-center justify-content-between gap-4">
+
+          <!-- Branding -->
+          <div class="footer-brand">
+            <p class="footer-name mb-1">Drake Perkins</p>
+            <p class="footer-subtitle mb-0">
+              Front-End Software Engineer
+            </p>
+          </div>
+
+          <!-- Footer Navigation -->
+          <nav aria-label="Footer navigation">
+            <ul class="footer-links list-unstyled d-flex flex-wrap align-items-center gap-3 mb-0">
+              <li>
+                <a href="#professional-work">Work</a>
+              </li>
+              <li>
+                <a href="#contact">Contact</a>
+              </li>
+              <li>
+                <a
+                  href="resume/Drake-Perkins-Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="footer-resume"
+                >
+                  <i class="bi bi-file-earmark-person"
+                    aria-hidden="true"></i>
+                  Resume (PDF)
+                </a>
+              </li>
+              <li>
+                <a href="#home">
+                  <i class="bi bi-arrow-up"
+                    aria-hidden="true"></i>
+                  Back to Top
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <div class="footer-bottom text-center mt-4 pt-3">
+          <p class="mb-0">
+            &copy; 2026 Drake Perkins.
+            Built with HTML, SCSS, JavaScript & Bootstrap.
+          </p>
+        </div>
+
+      </div>
     </footer>
 
     

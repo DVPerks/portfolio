@@ -1,11 +1,49 @@
-.education-section h2 {
-  font-size: 1.25rem;
-  font-weight: 700;
+
+.education-section {
+  .education-card {
+    background-color: #f8fafc;
+    border: 1px solid #c9d6e2;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(42, 65, 86, 0.08);
+  }
+
+  .education-year {
+    color: #526e87;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+  }
+
+  h3 {
+    color: #263f55;
+    font-weight: 700;
+  }
+
+  .education-minor {
+    color: #45637c;
+    font-weight: 600;
+  }
+
+  .education-school {
+    color: #526e87;
+  }
+
+  .education-summary {
+    color: #344f68;
+    line-height: 1.7;
+  }
+
+  .education-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+  }
 }
 
-.education-image {
-  max-width: 380px;
-  width: 100%;
-  border: 5px solid var(--education-image-border);
-  border-radius: 25px;
+@media (max-width: 767px) {
+  .education-section .education-card {
+    padding: 1.25rem;
+  }
 }
