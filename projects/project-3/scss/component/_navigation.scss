@@ -1,0 +1,82 @@
+/* ============================================= */
+/*              Navigation                       */
+/* ============================================= */
+@use '../utilities/variables' as variables;
+
+header {
+  background-color: variables.$lavendar;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1rem 0.5rem;
+  & .user-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    & .notification {
+      height: 100%;
+      border-right: 1px solid white;
+      display: block;
+    }
+    & a, img, h3 {
+      padding: 0 0.5rem;
+    }
+    & .user-icon {
+      width: 40px;
+      height: auto;
+    }
+  }
+}
+
+.nav {
+    padding: 0 2rem;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: variables.$violet;
+  &-link {
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px 0;
+    display: block;
+    width: 100%;
+    transition: 
+      background-color .2s ease-in-out, 
+      color .2s ease-in-out;
+  }
+  &-link:hover {
+    color: #fff;
+    background-color: teal;
+  }
+}
+
+.nav-link svg {
+  width: 36px;   
+  height: 36px;
+  fill: white;
+}
+
+.notification-link {
+  &:hover svg {
+    animation: bellRing 0.8s ease-in-out;
+  }
+  & svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+    transform-origin: top center;
+    transition: bellRing .5s ease-in-out;
+  }
+}
+
+@keyframes bellRing {
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-45deg); }
+  40% { transform: rotate(45deg); }
+  60% { transform: rotate(-22.5deg); }
+  80% { transform: rotate(22.5deg); }
+  100% { transform: rotate(0deg); }
+}

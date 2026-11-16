@@ -1,0 +1,50 @@
+@use '../utilities/variables' as variables;
+
+input.toggle {
+    appearance: none;
+    -webkit-appearance: none;
+    position: relative;
+    width: 100px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: variables.$light-gray;
+    border: 1px solid variables.$gray;
+    transition: background .3s;
+    outline: none;
+    cursor: pointer;
+    &::before {
+        content: 'OFF';
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-weight: 600;
+        transition: opacity .3s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 1.75rem;
+        width: 1.75rem;
+        background-color: rgb(255, 255, 255);
+        border: 2px solid variables.$gray;
+        transition: left .3s;
+    }
+    &:checked {
+        background-color: variables.$lavendar;
+        
+    }
+    &:checked::before {
+        content: 'ON';
+        left: 15px;
+        right: auto;
+        color: white;
+    }
+    &:checked::after {
+        left: 80%;
+    }
+}

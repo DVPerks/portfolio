@@ -1,0 +1,25 @@
+@use '../utilities/variables' as variables;
+
+.members {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    &-container {
+        text-align: center;
+        border-bottom: 1px solid variables.$gray;
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        & p {
+            margin: 0;
+            & span {
+                font-weight: bold;
+            }
+        }
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+    
+}

@@ -1,0 +1,30 @@
+@use 'base/normalize';
+
+body {
+    background-color: rgb(226, 232, 232);
+}
+
+#search {
+    display: block;
+    height: 4em;
+    padding: 1em;
+    width: 80%;
+    margin: 2em auto;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+    gap: 2em;
+    justify-content: center;
+    width: calc(100vw - 8em);
+    margin: 0 auto;
+    a {
+        min-width: 0;
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

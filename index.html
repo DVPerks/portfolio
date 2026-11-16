@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet">
+
+    <title>Drake Perkins's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+  </head>
+  <body class="bg-subtle-primary" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-top-margin="60px">
+    <!--Top navigation-->
+    <nav class="navbar sticky-top md:navbar-expand bg-1 fg-2 bg-subtle-secondary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Drake Perkins</a>
+        <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+        </button>
+        <dialog class="drawer drawer-end" tabindex="-1" id="navbarNavAltMarkup" aria-labelledby="navbarNavAltMarkupLabel">
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="navbarNavAltMarkupLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+          </div>
+          <div class="drawer-body">
+            <div id="navbar-scrollspy" class="nav nav-pills navbar-nav">
+              <a class="nav-link" href="#home" >HOME</a>
+              <a class="nav-link" href="#portfolio">PORTFOLIO</a>
+              <a class="nav-link" href="#education">EDUCTATION</a>
+              <a class="nav-link" href="#skills">SKILLS</a>
+              <a class="nav-link" href="#contact">CONTACT</a>
+            </div>
+          </div>
+        </dialog>
+      </div>
+    </nav>
+
+    
+    <!-- HOME SECTION -->
+    <header id="home" class="container py-4">
+      <div class="row align-items-start g-4">
+
+        
+
+        <!-- Personal Summary -->
+        <div class="order-2 md:order-1 col-12 md:col-6 mx-auto">
+          <h1>Hi, I'm Drake.</h1>
+          <h2>Front-End Developer</h2>
+
+          <p class="summary mt-3">
+            I have over seven years of experience building
+            responsive websites, interactive applications,
+            and engaging digital experiences.
+            I enjoy solving problems and creating web
+            experiences that are intuitive and accessible.
+          </p>
+
+          <a href="#portfolio" class="btn-solid theme-primary mt-3">
+            View My Work
+          </a>
+        </div>
+
+        <!-- Profile Image -->
+        <div class="order-1 md:order-2 col-8 md:col-3 mx-auto text-center">
+          <img
+            class="img-fluid rounded-8"
+            src="images/responsive-layout-profile.jpg"
+            alt="Photo of Drake Perkins"
+          >
+        </div>
+
+        
+
+      </div>
+    </header>
+
+
+    <main class="container">
+
+      <!-- PORTFOLIO SECTION -->
+      <section id="portfolio" class="portfolio-section p-4">
+
+        <h2 class="text-center mb-4">Portfolio</h2>
+
+        <div class="row g-3 gx-5 text-center">
+
+          <!-- Project 1 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-1.png"
+                class="card-img-top"
+                alt="Screenshot of the To-do List app"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">To-do List</h3>
+
+                <p class="card-text">
+                  This project is an interactive task management application built with React and Vite. It allows users to create, edit, complete, and delete tasks, with options to filter between active and completed items. It features reusable React components, dynamic state management using React Hooks, and accessibility enhancements for keyboard navigation and focus management.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">React.js</li>
+                  <li class="skill-tag rounded-4 p-2">Vite</li>
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">React Hooks</li>
+                  <li class="skill-tag rounded-4 p-2">State Management</li>
+                  <li class="skill-tag rounded-4 p-2">Component-Based UI</li>
+                  <li class="skill-tag rounded-4 p-2">Local Storage</li>
+                  <li class="skill-tag rounded-4 p-2">Accessibility</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a
+                    href="projects/project-1/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-solid theme-primary"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/todo-react"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-2.png"
+                class="card-img-top"
+                alt="Screenshot of the Game Show app"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Game Show App</h3>
+
+                <p class="card-text">
+                  This project is an interactive word-guessing game built with JavaScript. Players use an on-screen keyboard to uncover randomly selected phrases while managing a limited number of incorrect guesses. It features dynamic letter reveals, win/loss detection, and the ability to play again.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">HTML</li>
+                  <li class="skill-tag rounded-4 p-2">CSS</li>
+                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
+                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a
+                    href="projects/project-2/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-solid theme-primary"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/techdegree-project-6"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-3.png"
+                class="card-img-top"
+                alt="Screenshot of the WebApp Dashboard"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">WebApp Dashboard</h3>
+
+                <p class="card-text">
+                  This project is an interactive web dashboard built with JavaScript and Chart.js. It features dynamic traffic charts, social media statistics, user messaging with form validation, and customizable settings saved using local storage.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">Chart.js</li>
+                  <li class="skill-tag rounded-4 p-2">Data Visualization</li>
+                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
+                  <li class="skill-tag rounded-4 p-2">Event Handling</li>
+                  <li class="skill-tag rounded-4 p-2">Local Storage</li>
+                  <li class="skill-tag rounded-4 p-2">Form Validation</li>
+                  <li class="skill-tag rounded-4 p-2">HTML & CSS</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a
+                    href="projects/project-3/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-solid theme-primary"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/techdegree-project-7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-12 md:col-6">
+            <div class="card h-100">
+              <img
+                src="images/portfolio-4.png"
+                class="card-img-top"
+                alt="Screenshot of the Interactive Photo Gallary app"
+              >
+
+              <div class="card-body d-flex flex-column">
+                <h3 class="card-title h5">Interactive Photo Gallery</h3>
+
+                <p class="card-text">
+                  This project is an interactive photo gallery built with JavaScript and CSS Grid. It dynamically generates a responsive gallery from external image data and features real-time search filtering by photo titles and descriptions. Users can browse full-size images in an interactive lightbox with navigation and captions.
+                </p>
+
+                <h4 class="h6 mt-auto">Featured Skills:</h4>
+                
+                <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+                  <li class="skill-tag rounded-4 p-2">JavaScript</li>
+                  <li class="skill-tag rounded-4 p-2">HTML & CSS</li>
+                  <li class="skill-tag rounded-4 p-2">SCSS (Sass)</li>
+                  <li class="skill-tag rounded-4 p-2">CSS Grid</li>
+                  <li class="skill-tag rounded-4 p-2">Async/Await</li>
+                  <li class="skill-tag rounded-4 p-2">Fetch API</li>
+                  <li class="skill-tag rounded-4 p-2">DOM Manipulation</li>
+                  <li class="skill-tag rounded-4 p-2">Search Filtering</li>
+                  <li class="skill-tag rounded-4 p-2">baguetteBox.js</li>
+                </ul>
+
+                <div class="d-flex justify-content-center gap-3 mt-auto pt-3">
+                  <a
+                    href="projects/project-4/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-solid theme-primary"
+                  >
+                    Live Demo
+                  </a>
+
+                  <a
+                    href="https://github.com/DVPerks/techdegree-project-5"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn-outline theme-primary"
+                  >
+                    View Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- EDUCATION SECTION -->
+      <section id="education" class="education-section text-center py-4">
+
+        <h2 class="mb-4">EDUCATION</h2>
+
+        <p>Bachelor of Science in Computer Engineering, 2020</p>
+
+        <p>Florida Polytechnic University, Lakeland Florida</p>
+
+        <img
+          src="images/campus.png"
+          class="img-fluid education-image"
+          alt="Florida Polytechnic University building"
+        >
+
+      </section>
+      
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="skills-section text-center p-5">
+
+        <h2 class="mb-4">SKILLS</h2>
+
+        
+          <div class="d-block">
+            <h3>Langauges:</h3>
+            <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+              <li class="skill-tag rounded-4 p-2">HTML</li>
+              <li class="skill-tag rounded-4 p-2">CSS</li>
+              <li class="skill-tag rounded-4 p-2">JavaScript</li>
+              <li class="skill-tag rounded-4 p-2">TypeScript</li>
+              <li class="skill-tag rounded-4 p-2">Python</li>
+              <li class="skill-tag rounded-4 p-2">SQL</li>
+            </ul>
+          </div>
+          <div class="d-block">
+            <h3>Frameworks:</h3>
+            <ul class="d-flex flex-wrap justify-content-center gap-3 list-unstyled m-0">
+              <li class="skill-tag rounded-4 p-2">HTML</li>
+              <li class="skill-tag rounded-4 p-2">CSS</li>
+              <li class="skill-tag rounded-4 p-2">JavaScript</li>
+              <li class="skill-tag rounded-4 p-2">TypeScript</li>
+              <li class="skill-tag rounded-4 p-2">Python</li>
+              <li class="skill-tag rounded-4 p-2">SQL</li>
+            </ul>
+          </div>
+
+      </section>
+
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="contact-section text-center py-4">
+
+        <h2 class="mb-4">CONTACT</h2>
+
+        <div class="mx-auto contact-content">
+
+          <p class="mb-3">
+            If you're interested in chatting or want more information
+            about what I've been working on, I'd love to hear from you!
+          </p>
+
+          <p class="mb-3">
+            Phone:
+            <a href="tel:+8166941588">
+              +1 (816) 694-1588
+            </a>
+          </p>
+
+          <p>
+            Email:
+            <a href="mailto:drakevperks@gmail.com">
+              drakevperks@gmail.com
+            </a>
+          </p>
+
+        </div>
+
+      </section>
+
+    </main>
+
+    <!--Footer navigation-->
+    <footer>
+    </footer>
+
+    
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+  </body>
+</html>

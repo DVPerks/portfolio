@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Import baguetteBox css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.13.0/baguetteBox.css" integrity="sha512-OpEejJiT4XFkeg3YTJ6nU59qu+krIBscHeS7GmMmHBiute8Ma3ziccloHp5YLTsBoQQqVvIoLpBghUDJj4P+rg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- import styles -->
+    <link rel="stylesheet" href="css/styles.css" >
+</head>
+<body>
+    <input type="search" name="search" id="search" placeholder="Search">
+    
+    <!-- Set up gallery container -->
+    <div class="gallery" id="gallery-container"></div>
+
+
+    <!-- Import baguetteBox JS and initialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.13.0/baguetteBox.js" integrity="sha512-oc+DwEXfTGmt0nIg3GaxeqmXGpsrIT0euceI/ffDCqz+lgSXowtkgQzMM25rV0n3QWy1oqUu3crl4cxQ7345gw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <!-- load search filter into html -->
+    <script src="js/searchFilter.js"></script>
+
+    <!-- load gallary images into html -->
+    <script src="js/app.js"></script>
+</body>
+</html>
