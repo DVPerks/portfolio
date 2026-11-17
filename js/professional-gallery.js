@@ -159,7 +159,8 @@ function initializeProfessionalGallery(container) {
 
   const caption = document.createElement('p');
   caption.className = 'pro-gallery-caption';
-  caption.setAttribute('aria-live', 'polite');
+  caption.setAttribute("aria-live", "polite");
+  caption.setAttribute("aria-atomic", "true");
 
   const previous = document.createElement('button');
   previous.type = 'button';
@@ -175,8 +176,6 @@ function initializeProfessionalGallery(container) {
 
   const count = document.createElement('span');
   count.className = 'pro-gallery-count';
-  count.setAttribute('aria-live', 'polite');
-  count.setAttribute('aria-atomic', 'true');
 
   const actions = document.createElement('div');
   actions.className = 'pro-gallery-actions';
@@ -247,7 +246,9 @@ function initializeProfessionalGallery(container) {
 
     mediaElement.className = 'pro-gallery-media';
     stage.replaceChildren(mediaElement);
-    caption.textContent = `${item.type === 'video' ? 'Video' : 'Screenshot'}: ${item.label}`;
+    caption.textContent =
+      `${item.type === "video" ? "Video" : "Screenshot"}: ` +
+      `${item.label} (${activeIndex + 1} of ${items.length})`;
     count.textContent = `${activeIndex + 1} / ${items.length}`;
     thumbButtons.forEach((button, i) => {
       const active = i === activeIndex;

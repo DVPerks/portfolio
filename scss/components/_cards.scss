@@ -9,6 +9,25 @@
   border-top: 3px solid var(--skill-card-accent);
 }
 
+.portfolio-section .card,
+.professional-section .pro-card {
+
+  .card-body {
+    color: var(--color-ink);
+  }
+
+  .card-title,
+  h4,
+  h5 {
+    color: var(--color-ink);
+  }
+
+  .card-text {
+    color: var(--color-muted);
+    line-height: 1.6;
+  }
+}
+
 .professional-section {
   .pro-card {
     @include mixins.card-surface(

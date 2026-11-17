@@ -50,7 +50,10 @@ html {
 }
 
 a:focus-visible,
-button:focus-visible {
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
   outline: 3px solid #2f678f;
   outline-offset: 3px;
 }
@@ -113,6 +116,24 @@ button:focus-visible {
   border-radius: 12px;
   box-shadow: 0 3px 10px rgba(42, 65, 86, 0.08);
   border-top: 3px solid var(--skill-card-accent);
+}
+
+.portfolio-section .card .card-body,
+.professional-section .pro-card .card-body {
+  color: var(--color-ink);
+}
+.portfolio-section .card .card-title,
+.portfolio-section .card h4,
+.portfolio-section .card h5,
+.professional-section .pro-card .card-title,
+.professional-section .pro-card h4,
+.professional-section .pro-card h5 {
+  color: var(--color-ink);
+}
+.portfolio-section .card .card-text,
+.professional-section .pro-card .card-text {
+  color: var(--color-muted);
+  line-height: 1.6;
 }
 
 .professional-section .pro-card {
