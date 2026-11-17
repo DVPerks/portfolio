@@ -13,6 +13,9 @@
     <link href="css/main.css" rel="stylesheet">
   </head>
   <body class="bg-subtle-primary" data-bs-spy="scroll" data-bs-target="#navbar-scrollspy" data-bs-top-margin="90px">
+    
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!--Top navigation-->
     <nav class="navbar sticky-top lg:navbar-expand bg-1 fg-2 bg-subtle-secondary">
       <div class="container-fluid">
@@ -39,60 +42,56 @@
       </div>
     </nav>
 
-    
-    <!-- HOME SECTION -->
-    <header id="home" class="container py-4">
-      <div class="row align-items-start g-4">
+    <main id="main-content" class="container" tabindex="-1">
+      <!-- HOME SECTION -->
+      <header id="home" class="container py-4">
+        <div class="row align-items-start g-4">
 
-        
+          <!-- Personal Summary -->
+          <div class="order-2 md:order-1 col-12 md:col-6 mx-auto">
+            <h1>Hi, I'm Drake.</h1>
+            <h2>Front-End Developer</h2>
 
-        <!-- Personal Summary -->
-        <div class="order-2 md:order-1 col-12 md:col-6 mx-auto">
-          <h1>Hi, I'm Drake.</h1>
-          <h2>Front-End Developer</h2>
+            <p class="summary mt-3">
+              I have over seven years of experience building
+              responsive websites, interactive applications,
+              and engaging digital experiences.
+              I enjoy solving problems and creating web
+              experiences that are intuitive and accessible.
+            </p>
 
-          <p class="summary mt-3">
-            I have over seven years of experience building
-            responsive websites, interactive applications,
-            and engaging digital experiences.
-            I enjoy solving problems and creating web
-            experiences that are intuitive and accessible.
-          </p>
+            <div class="d-flex flex-wrap gap-3 mt-3">
+              <a
+                href="#portfolio"
+                class="btn-solid theme-primary"
+              >
+                View My Work
+              </a>
 
-          <div class="d-flex flex-wrap gap-3 mt-3">
-            <a
-              href="#portfolio"
-              class="btn-solid theme-primary"
-            >
-              View My Work
-            </a>
+              <a
+                href="resume/Drake-Perkins-Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-outline theme-primary"
+              >
+                <i class="bi bi-file-earmark-person"
+                  aria-hidden="true"></i>
+                View Resume
+              </a>
+            </div>
 
-            <a
-              href="resume/Drake-Perkins-Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-outline theme-primary"
-            >
-              <i class="bi bi-file-earmark-person"
-                aria-hidden="true"></i>
-              View Resume
-            </a>
           </div>
 
+          <!-- Profile Image -->
+          <div class="order-1 md:order-2 col-8 md:col-3 mx-auto text-center">
+            <img
+              class="img-fluid rounded-8"
+              src="images/responsive-layout-profile.jpg"
+              alt="Photo of Drake Perkins"
+            >
+          </div>
         </div>
-
-        <!-- Profile Image -->
-        <div class="order-1 md:order-2 col-8 md:col-3 mx-auto text-center">
-          <img
-            class="img-fluid rounded-8"
-            src="images/responsive-layout-profile.jpg"
-            alt="Photo of Drake Perkins"
-          >
-        </div>
-      </div>
-    </header>
-
-    <main class="container">
+      </header>
 
       <!-- PORTFOLIO SECTION -->
       <section id="portfolio" class="portfolio-section p-4 py-5">
@@ -725,9 +724,6 @@
 
         </div>
       </section>
-
-
-      
       
       <!-- EDUCATION SECTION -->
       <section id="education" class="education-section py-5">
@@ -767,7 +763,6 @@
                 interactive applications, and technical
                 problem-solving.
               </p>
-
             </div>
 
             <!-- University Image -->
@@ -778,13 +773,9 @@
                 alt="Florida Polytechnic University campus building"
               >
             </div>
-
           </div>
         </div>
-
       </section>
-
-
       
       <!-- CONTACT SECTION -->
       <section id="contact" class="contact-section py-5">
@@ -880,11 +871,9 @@
                   </span>
                 </a>
               </div>
-
             </div>
           </div>
         </div>
-
       </section>
     </main>
 
@@ -932,7 +921,6 @@
               </li>
             </ul>
           </nav>
-
         </div>
 
         <div class="footer-bottom text-center mt-4 pt-3">
@@ -940,11 +928,16 @@
             &copy; 2026 Drake Perkins.
             Built with HTML, SCSS, JavaScript & Bootstrap.
           </p>
+          <p>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px"
+                    src="https://jigsaw.w3.org/css-validator/images/vcss"
+                    alt="Valid CSS!" />
+            </a>
+          </p>
         </div>
-
       </div>
     </footer>
-
     
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
     <script src="js/professional-gallery.js" defer></script>

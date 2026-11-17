@@ -28,9 +28,31 @@ html {
     scroll-behavior: smooth;
   }
 }
-.professional-section .card-text,
-.professional-section .card-body {
-  color: #000;
+.skip-link {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background-color: #263f55;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transform: translate(-50%, -200%);
+}
+.skip-link:focus, .skip-link:focus-visible {
+  transform: translate(-50%, 0);
+  color: #ffffff;
+  outline: 3px solid #86b7fe;
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #2f678f;
+  outline-offset: 3px;
 }
 
 .professional-section {
