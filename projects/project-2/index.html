@@ -1,47 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" data-theme="classic">
   <head>
-    <meta charset="utf-8">
-    <title>Wheel of Success!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#24496f" />
+    <meta name="description" content="Wheel of Success: a responsive, accessible word-guessing game." />
+    <title>Wheel of Success</title>
+    <script type="module" crossorigin src="./assets/index-CsRcotmV.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bf_njH-Z.css">
   </head>
   <body>
-    <div class="main-container">
-      <div id="overlay" class="start">
-        <h2 class="title">Wheel of Success</h2>
-        <a class="btn__reset">Start Game</a>
-      </div>
+    <a class="skip-link" href="#game-content">Skip to game</a>
 
-      <div id="banner" class="section">
-        <h2 class="header">Wheel of Success</h2>
-      </div>
+    <!-- The game is initially inert while the setup dialog is visible. -->
+    <main id="game-content" class="game-shell" inert aria-hidden="true">
+      <header id="banner" class="game-banner">
+        <p class="eyebrow">Word guessing game</p>
+        <h1 class="game-banner__title">Wheel of Success</h1>
+        <button id="game-home" class="button button--secondary" type="button">Return to setup</button>
+      </header>
 
-      <div id="phrase" class="section">
-        <ul></ul>
-      </div>
-      <div id="qwerty" class="section">
-        <div class="keyrow">
-          <button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button>
-        </div>
-        <div class="keyrow">
-          <button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button>
-        </div>
-        <div class="keyrow">
-          <button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button>
-        </div>
-      </div>
+      <section id="definition" class="hint-panel" aria-labelledby="definition-heading">
+        <h2 id="definition-heading" class="section-heading">Definition hint</h2>
+        <p aria-live="polite">A definition hint appears here after you start a game.</p>
+      </section>
 
-      <div id="scoreboard" class="section">
-        <ol>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
-          <li class="tries"><img src="images/liveHeart.png" height="35px" width="30px"></li>
+      <section id="timer" class="timer" aria-labelledby="timer-heading" hidden>
+        <h2 id="timer-heading" class="section-heading">Time remaining</h2>
+        <p id="timer-countdown" aria-live="off">25 seconds</p>
+        <progress id="timer-progress" value="25" max="25" aria-label="Time remaining in hard mode">25 of 25 seconds</progress>
+        <p class="timer__annotation">Every five seconds costs one life.</p>
+      </section>
+
+      <section id="word" class="word-panel" aria-label="Word to guess">
+        <ul class="word-panel__letters" aria-label="Hidden letters"></ul>
+      </section>
+
+      <p id="game-status" class="game-status" role="status" aria-live="polite" aria-atomic="true">Choose a difficulty to begin.</p>
+
+      <section id="qwerty" class="keyboard" aria-label="On-screen keyboard">
+        <div class="keyrow" role="group" aria-label="Top keyboard row">
+          <button type="button" aria-label="Guess Q" disabled>q</button><button type="button" aria-label="Guess W" disabled>w</button><button type="button" aria-label="Guess E" disabled>e</button><button type="button" aria-label="Guess R" disabled>r</button><button type="button" aria-label="Guess T" disabled>t</button><button type="button" aria-label="Guess Y" disabled>y</button><button type="button" aria-label="Guess U" disabled>u</button><button type="button" aria-label="Guess I" disabled>i</button><button type="button" aria-label="Guess O" disabled>o</button><button type="button" aria-label="Guess P" disabled>p</button>
+        </div>
+        <div class="keyrow" role="group" aria-label="Middle keyboard row">
+          <button type="button" aria-label="Guess A" disabled>a</button><button type="button" aria-label="Guess S" disabled>s</button><button type="button" aria-label="Guess D" disabled>d</button><button type="button" aria-label="Guess F" disabled>f</button><button type="button" aria-label="Guess G" disabled>g</button><button type="button" aria-label="Guess H" disabled>h</button><button type="button" aria-label="Guess J" disabled>j</button><button type="button" aria-label="Guess K" disabled>k</button><button type="button" aria-label="Guess L" disabled>l</button>
+        </div>
+        <div class="keyrow" role="group" aria-label="Bottom keyboard row">
+          <button type="button" aria-label="Guess Z" disabled>z</button><button type="button" aria-label="Guess X" disabled>x</button><button type="button" aria-label="Guess C" disabled>c</button><button type="button" aria-label="Guess V" disabled>v</button><button type="button" aria-label="Guess B" disabled>b</button><button type="button" aria-label="Guess N" disabled>n</button><button type="button" aria-label="Guess M" disabled>m</button>
+        </div>
+      </section>
+
+      <aside id="scoreboard" class="scoreboard" aria-labelledby="scoreboard-heading">
+        <h2 id="scoreboard-heading" class="section-heading">Lives remaining: <span id="lives-count">5</span></h2>
+        <ol class="scoreboard__lives" aria-hidden="true">
+          <li class="tries"><img src="./images/liveHeart.png" alt="" width="30" height="35" /></li>
+          <li class="tries"><img src="./images/liveHeart.png" alt="" width="30" height="35" /></li>
+          <li class="tries"><img src="./images/liveHeart.png" alt="" width="30" height="35" /></li>
+          <li class="tries"><img src="./images/liveHeart.png" alt="" width="30" height="35" /></li>
+          <li class="tries"><img src="./images/liveHeart.png" alt="" width="30" height="35" /></li>
         </ol>
+      </aside>
+    </main>
+
+    <!-- Setup and results share a single accessible dialog. -->
+    <section id="overlay" class="overlay start" role="dialog" aria-modal="true" aria-labelledby="game-title" aria-describedby="setup-intro">
+      <div id="setup-screen" class="overlay__content">
+        <p class="eyebrow">A word-guessing game</p>
+        <h1 id="game-title" class="overlay__title">Wheel of Success</h1>
+        <p id="setup-intro" class="overlay__intro">Pick your challenge and customize your game.</p>
+        <form id="setup-form">
+          <fieldset>
+            <legend class="visually-hidden">Game setup</legend>
+            <div class="form-field">
+              <label for="difficulty">Difficulty</label>
+              <select id="difficulty" name="difficulty" aria-describedby="difficulty-help">
+                <option value="easy" selected>Easy · 3 letters · untimed</option>
+                <option value="medium">Medium · 6 letters · untimed</option>
+                <option value="hard">Hard · 9 letters · 25-second timer</option>
+              </select>
+              <p class="form-field__help" id="difficulty-help">Five missed guesses end a round. In Hard mode, every five seconds also costs a life.</p>
+            </div>
+            <div class="form-field">
+              <label for="lifeicon">Life icons</label>
+              <select id="lifeicon" name="lifeicon">
+                <option value="Heart" selected>Hearts ❤️</option>
+                <option value="Emoji">Emojis 😀</option>
+                <option value="Shield">Shields 🛡️</option>
+                <option value="Thumbs">Thumbs 👍</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label for="theme">Theme</label>
+              <select id="theme" name="theme">
+                <option value="classic">Classic</option>
+                <option value="dark">Dark</option>
+                <option value="neon">Neon</option>
+              </select>
+            </div>
+            <button class="button button--primary" type="submit">Start game</button>
+          </fieldset>
+        </form>
+        <p id="setup-error" class="overlay__error" role="alert" hidden></p>
       </div>
-    </div>
-    <script type="text/javascript" src="js/app.js"></script>
+      <div id="loading-screen" class="overlay__content" hidden>
+        <p class="eyebrow">Preparing your game</p>
+        <h1 id="loading-title" class="overlay__title" tabindex="-1">Getting your game ready…</h1>
+        <p id="loading-description" class="overlay__intro" role="status">Choosing a word for your round…</p>
+        <div class="button-container">
+          <button id="loading-cancel" class="button button--primary" type="button">Back to setup</button>
+        </div>
+      </div>
+      <div id="result-screen" class="overlay__content" hidden></div>
+    </section>
+
+    <!-- Endgame markup is cloned into the result view for each finished game. -->
+    <template id="win-screen-template">
+      <p class="eyebrow">Round complete</p>
+      <h1 id="result-title" class="overlay__title" tabindex="-1">You win!</h1>
+      <p id="result-summary" class="overlay__intro">Great work! You solved <strong data-result-word></strong>.</p>
+      <div class="result-streaks" hidden>
+        <p class="result-streaks__label">Difficulty: <span data-streak-difficulty></span></p>
+        <p>Streak: <span data-streak="current">0</span></p>
+        <p>Best streak: <span data-streak="best">0</span></p>
+      </div>
+      <div class="button-container">
+        <button class="button button--primary btn_reset" type="button">Play again</button>
+        <button class="button button--secondary btn_home" type="button">Home</button>
+      </div>
+    </template>
+    <template id="lose-screen-template">
+      <p class="eyebrow">Round complete</p>
+      <h1 id="result-title" class="overlay__title" tabindex="-1">Game over</h1>
+      <p id="result-summary" class="overlay__intro">You've used all five lives. The word was <strong data-result-word></strong>.</p>
+      <div class="result-streaks" hidden>
+        <p class="result-streaks__label">Difficulty: <span data-streak-difficulty></span></p>
+        <p>Streak: <span data-streak="current">0</span></p>
+        <p>Best streak: <span data-streak="best">0</span></p>
+      </div>
+      <div class="button-container">
+        <button class="button button--primary btn_reset" type="button">Try again</button>
+        <button class="button button--secondary btn_home" type="button">Home</button>
+      </div>
+    </template>
   </body>
 </html>
